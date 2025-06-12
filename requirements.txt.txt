@@ -4,7 +4,6 @@ pandas
 scikit-learn
 seaborn
 matplotlib
-pickle
 fastapi
 uvicorn
 enum
