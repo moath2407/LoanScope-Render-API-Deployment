@@ -10,7 +10,7 @@ import os
 with open(os.path.join(os.path.dirname(__file__), 'model_features.pkl'), 'rb') as f:
     model_features = pickle.load(f)  
 
-with open(os.path.join(os.path.dirname(__file__), 'model_LinearClassifier.pkl'), 'rb') as f:
+with open(os.path.join(os.path.dirname(__file__), 'model_Linearclassifier.pkl'), 'rb') as f:
     LinearSVC = pickle.load(f)  
 
 with open(os.path.join(os.path.dirname(__file__), 'model_regressor.pkl'), 'rb') as f:
