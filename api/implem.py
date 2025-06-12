@@ -4,20 +4,20 @@ from enum import Enum
 import pickle
 import pandas as pd
 import numpy as np
+import os
 
 #Loading all the pickled assets
-file_path = os.path.join(os.path.dirname(__file__), 'model_features.pkl')
-with open(file_path, 'rb') as f:
+with open(os.path.join(os.path.dirname(__file__), 'model_features.pkl'), 'rb') as f:
+    model_features = pickle.load(f)  
 
-file_path = os.path.join(os.path.dirname(__file__), 'model_LinearClassifier.pkl')
-with open(file_path, 'rb') as f:
+with open(os.path.join(os.path.dirname(__file__), 'model_LinearClassifier.pkl'), 'rb') as f:
+    LinearSVC = pickle.load(f)  
 
-file_path = os.path.join(os.path.dirname(__file__), 'model_regressor.pkl')
-with open(file_path, 'rb') as f:
+with open(os.path.join(os.path.dirname(__file__), 'model_regressor.pkl'), 'rb') as f:
+    regressor = pickle.load(f)  
 
-file_path = os.path.join(os.path.dirname(__file__), 'model_scaler.pkl')
-with open(file_path, 'rb') as f:
-
+with open(os.path.join(os.path.dirname(__file__), 'model_scaler.pkl'), 'rb') as f:
+    scaler = pickle.load(f) 
 
 
 app = FastAPI()
